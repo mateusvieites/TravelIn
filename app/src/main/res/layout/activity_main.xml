@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/AzulPadrao"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="35dp"
+        >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/rounded"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ETLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintLogin"
+            android:singleLine="true"
+            android:gravity="center"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/ETPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintSenha"
+            android:singleLine="true"
+            android:minHeight="48dp"
+            android:inputType="textPassword"
+            android:gravity="center"
+
+            />
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/botaoPadrao"
+            android:text="@string/buttonLogin"
+            android:textColor="#C5CAE9" />
+        <Button
+            android:id="@+id/btCadastrarLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/botaoPadrao"
+            android:text="@string/buttonCadastrarLogin"
+            android:textColor="#C5CAE9" />
+    </LinearLayout>
+
+
+</LinearLayout>

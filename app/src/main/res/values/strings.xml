@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Travel In</string>
+
+
+    <string name="buttonLogin">Login</string>
+    <string name="buttonCadastrarLogin">Cadastrar</string>
+    <string name="buttonCancelar">Cancelar</string>
+
+
+    <string name="ErroLogin">Login não encontrado</string>
+    <string name="ErroCadLoginVazio">Por favor reveja os campos</string>
+    <string name="ErroLoginJaExistente">Infelizmente esse login já está em uso</string>
+
+    <string name="hintLogin">Insira seu login</string>
+    <string name="hintSenha">Insira sua senha</string>
+    <string name="hintCadastrarLogin">Digite seu futuro login :)</string>
+    <string name="hintCadastrarSenha">Digite sua senha super secreta</string>
+
+</resources>
