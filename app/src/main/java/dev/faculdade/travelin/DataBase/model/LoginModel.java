@@ -20,15 +20,15 @@ public class LoginModel {
     DROP_TABLE = "drop table if exits " + TABELA_NOME;
 
     //Atributos de usuario
-    private int id;
+    private long id;
     private String usuario;
     private String Senha;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
