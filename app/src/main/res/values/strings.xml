@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Travel In</string>
 
+    <string name="MsgLoginSucesso">Login efetuado com sucesso</string>
 
     <string name="buttonLogin">Login</string>
     <string name="buttonCadastrarLogin">Cadastrar</string>
@@ -11,6 +12,7 @@
     <string name="ErroLogin">Login não encontrado</string>
     <string name="ErroCadLoginVazio">Por favor reveja os campos</string>
     <string name="ErroLoginJaExistente">Infelizmente esse login já está em uso</string>
+    <string name="ErroUsuarioInvalido">Usuário não encontrado!</string>
 
     <string name="hintLogin">Insira seu login</string>
     <string name="hintSenha">Insira sua senha</string>

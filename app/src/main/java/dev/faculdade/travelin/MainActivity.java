@@ -43,23 +43,12 @@ public class MainActivity extends AppCompatActivity {
 
                 LoginModel model = dao.Select(Login.getText().toString(), Password.getText().toString());
                 if (model != null) {
-                    Toast.makeText(MainActivity.this, "Login efetuado com sucesso!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this,getString(R.string.MsgLoginSucesso), Toast.LENGTH_LONG).show();
                     //todo aqui vai a activity da tela principal
+                    startActivity(new Intent( MainActivity.this, MenuActivity.class));
                 } else {
-                    Toast.makeText(MainActivity.this, "Usuário ou senha inválido!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.ErroUsuarioInvalido), Toast.LENGTH_LONG).show();
                 }
-
-                /* if ( Logins.containsKey( Login.getText().toString() ) ) {
-                    if(Logins.get(Login.getText().toString()).equals(Password.getText().toString())){
-                        //abre uma tela nova
-                        //startActivity(new Intent( MainActivity.this, MenuActivity.class));
-                    }else{
-                        Funcoes.msgErro(getApplicationContext(),getString(R.string.ErroLogin).toString());
-                    }
-                }
-                else{
-                    Funcoes.msgErro(getApplicationContext(),getString(R.string.ErroLogin).toString());
-                }*/
             }
         });
 
