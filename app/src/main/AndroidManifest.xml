@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelIn">
         <activity
+            android:name=".MenuActivity"
+            android:exported="true" />
+        <activity
             android:name=".CadastrarActivity"
             android:exported="true" />
         <activity

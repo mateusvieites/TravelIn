@@ -5,7 +5,8 @@
     <string name="buttonLogin">Login</string>
     <string name="buttonCadastrarLogin">Cadastrar</string>
     <string name="buttonCancelar">Cancelar</string>
-
+    <string name="buttonPlanejarViagem">Planejar Viagem</string>
+    <string name="buttonMinhasViagens">Minhas Viagens</string>
 
     <string name="ErroLogin">Login não encontrado</string>
     <string name="ErroCadLoginVazio">Por favor reveja os campos</string>
