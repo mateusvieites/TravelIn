@@ -25,11 +25,14 @@
             android:id="@+id/btPlanejar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:backgroundTint="@color/botaoPadrao"
             android:text="@string/buttonPlanejarViagem">
         </Button>
         <Button
             android:id="@+id/btMinhasViagens"
             android:layout_width="match_parent"
+
+            android:backgroundTint="@color/botaoPadrao"
             android:layout_height="50dp"
             android:text="@string/buttonMinhasViagens">
 
