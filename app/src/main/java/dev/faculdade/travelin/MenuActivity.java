@@ -25,7 +25,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Abrir menu para cadastrar nova pesquisa de viagem
-                //startActivity(new Intent( MainActivity.this, MenuActivity.class));
+                startActivity(new Intent( MenuActivity.this, PlanejarActivity.class));
             }
         });
 

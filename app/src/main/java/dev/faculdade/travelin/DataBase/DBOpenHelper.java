@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.appcompat.widget.TintContextWrapper;
 
 import dev.faculdade.travelin.DataBase.model.LoginModel;
+import dev.faculdade.travelin.DataBase.model.OrcamentoModel;
 
 public class DBOpenHelper extends SQLiteOpenHelper {
     public static final String
@@ -22,11 +23,14 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(LoginModel.CREATE_TABLE);
+        db.execSQL(OrcamentoModel.CREATE_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(LoginModel.DROP_TABLE);
         db.execSQL(LoginModel.CREATE_TABLE);
+        db.execSQL(OrcamentoModel.DROP_TABLE);
+        db.execSQL(OrcamentoModel.CREATE_TABLE);
     }
 }

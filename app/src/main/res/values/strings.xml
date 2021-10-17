@@ -3,6 +3,8 @@
 
     <string name="MsgLoginSucesso">Login efetuado com sucesso</string>
 
+    <string name="buttonSalvar">Salvar</string>
+
     <string name="buttonLogin">Login</string>
     <string name="buttonCadastrarLogin">Cadastrar</string>
     <string name="buttonCancelar">Cancelar</string>
@@ -18,5 +20,8 @@
     <string name="hintSenha">Insira sua senha</string>
     <string name="hintCadastrarLogin">Digite seu futuro login :)</string>
     <string name="hintCadastrarSenha">Digite sua senha super secreta</string>
+
+    <string name="textDescricao">Informe uma breve descrição para seu orçamento</string>
+    <string name="hintDescricao">Digite aqui</string>
 
 </resources>
