@@ -38,12 +38,27 @@ public class OrcamentoDAO extends AbstrataDAO {
         return linhasAfetadas;
     }
 
-    public int Delete() {
-        return 0;
+    public void Delete(final Integer id) {
+        Open();
+        db.delete(OrcamentoModel.TABELA_NOME, OrcamentoModel.COLUNA_ID + " = ?", new String[]{id.toString()});
+        Close();
     }
 
-    public int Update() {
-        return 0;
+    public int Update(final Integer id, String descricao) {
+
+        int linhasAfetadas = 0;
+
+        try {
+            Open();
+
+            ContentValues values = new ContentValues();
+            values.put(OrcamentoModel.COLUNA_DESCRICAO, descricao);
+            linhasAfetadas = db.update(OrcamentoModel.TABELA_NOME, values, OrcamentoModel.COLUNA_ID + " = ?", new String[]{id.toString()});
+        } finally {
+            Close();
+        }
+
+        return linhasAfetadas;
     }
 
     public OrcamentoModel Select(final String descricao) {
