@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelIn">
         <activity
+            android:name=".Dados"
+            android:exported="true" />
+        <activity
             android:name=".PlanejarActivity"
             android:exported="true" />
         <activity
