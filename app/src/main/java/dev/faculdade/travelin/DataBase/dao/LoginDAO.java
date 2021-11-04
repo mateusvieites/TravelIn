@@ -10,7 +10,7 @@ import java.util.List;
 import dev.faculdade.travelin.DataBase.DBOpenHelper;
 import dev.faculdade.travelin.DataBase.model.LoginModel;
 
-public class LoginDAO extends AbstrataDAO {
+public class LoginDAO extends AbstractDAO {
 
     private final String[] colunas = {
             LoginModel.COLUNA_ID,

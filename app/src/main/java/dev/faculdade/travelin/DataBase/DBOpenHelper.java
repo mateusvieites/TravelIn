@@ -4,9 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.appcompat.widget.TintContextWrapper;
-
-import dev.faculdade.travelin.DataBase.model.ItemOrcamentoModel;
 import dev.faculdade.travelin.DataBase.model.LoginModel;
 import dev.faculdade.travelin.DataBase.model.OrcamentoModel;
 
@@ -25,7 +22,6 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(LoginModel.CREATE_TABLE);
         db.execSQL(OrcamentoModel.CREATE_TABLE);
-        db.execSQL(ItemOrcamentoModel.CREATE_TABLE);
     }
 
     @Override
@@ -34,7 +30,5 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         db.execSQL(LoginModel.CREATE_TABLE);
         db.execSQL(OrcamentoModel.DROP_TABLE);
         db.execSQL(OrcamentoModel.CREATE_TABLE);
-        db.execSQL(ItemOrcamentoModel.DROP_TABLE);
-        db.execSQL(ItemOrcamentoModel.CREATE_TABLE);
     }
 }
