@@ -26,4 +26,25 @@
     <string name="hintDescricao">Digite aqui</string>
     <string name="hintDuracaoViagem">Duração da Viagem</string>
 
+    <string name="TextTotal">Total</string>
+    <string name="TextValor">Valor</string>
+    <String name="TextAdicionarViagem">Adicionar a Viagem?</String>
+
+    <string name="TextGasolina">Gasolina</string>
+    <string name="TextTotalEstimadoGas">Total estimado de quilometros</string>
+    <string name="TextMediaQuilometragem">Média de quilometros por litro</string>
+    <string name="TextCustoMedioPorLitro">Custo médio por litro</string>
+    <string name="TextTotalVeiculos">Total de veículos</string>
+
+    <string name="TextTarifaAerea">Tarifa aérea</string>
+    <string name="CustoEstimadoPessoa">Custo Estimado por pessoa</string>
+    <string name="TextAluguelVeiculo">Aluguel de Veículos</string>
+    <string name="TextRefeicao">Refeições</string>
+    <string name="TextCustoEstimadorefeicao">Custo Estimado por refeição</string>
+    <string name="TextRefeicaoPorDia">Refeições por dia</string>
+    <string name="TextHospedagem">Hospedagem</string>
+    <string name="TextCustoMedioPorNoite">Custo médio(por noite)</string>
+    <string name="TextTotalNoites">Total de noites</string>s
+    <string name="TextTotalQuartos">Total de quartos</string>
+
 </resources>
