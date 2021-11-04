@@ -48,31 +48,42 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="20dp"
                     android:text="Gasolina"
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
                     android:text="Total estimado de quilometros"
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
                     android:text="Média de quilometros por litro"
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
                     android:text="Custo médio por litro"
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
                     android:text="Total de veículos"
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
                     android:text="Total"
                     />
             </LinearLayout>
@@ -81,43 +92,63 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
                     android:text="Valor"></TextView>
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="50dp"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="10dp"></EditText>
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="50dp"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="10dp"></EditText>
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="50dp"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="10dp"></EditText>
+
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="50dp"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="10dp"></EditText>
+
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="50dp"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="10dp"></EditText>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Adicionar a Viagem?" />
+                    android:text="Adicionar a Viagem?"
+                    android:textSize="15dp" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sim"></Button>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/Background"
+                        android:textColor="@color/CorPrimaria"
+                        android:text="Sim"></Button>
+                    
+                </LinearLayout>
             </LinearLayout>
 
 
