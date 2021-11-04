@@ -9,16 +9,20 @@
     android:background="@color/Background"
     >
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="622dp"
-        android:layout_marginTop="35dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <EditText
@@ -26,7 +30,8 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hintTotalDeViajantes"
                 android:inputType="number"
-                android:minHeight="48dp"></EditText>
+                android:minHeight="48dp"
+                android:autofillHints=""></EditText>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -42,49 +47,49 @@
             >
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:text="Gasolina"
+                    android:textSize="20sp"
+                    android:text="@string/TextGasolina"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="47dp"
                     android:gravity="bottom"
                     android:paddingBottom="5dp"
-                    android:text="Total estimado de quilometros"
+                    android:text="@string/TextTotalEstimadoGas"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="47dp"
                     android:gravity="bottom"
                     android:paddingBottom="5dp"
-                    android:text="Média de quilometros por litro"
+                    android:text="@string/TextMediaQuilometragem"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="47dp"
                     android:gravity="bottom"
                     android:paddingBottom="5dp"
-                    android:text="Custo médio por litro"
+                    android:text="@string/TextCustoMedioPorLitro"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="47dp"
                     android:gravity="bottom"
                     android:paddingBottom="5dp"
-                    android:text="Total de veículos"
+                    android:text="@string/TextTotalVeiculos"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="47dp"
                     android:gravity="bottom"
                     android:paddingBottom="5dp"
-                    android:text="Total"
+                    android:text="@string/TextTotal"
                     />
             </LinearLayout>
             <LinearLayout
@@ -96,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="20dp"
-                    android:text="Valor"></TextView>
+                    android:text="@string/TextValor"></TextView>
 
                 <EditText
                     android:layout_width="50dp"
@@ -133,27 +138,24 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Adicionar a Viagem?"
-                    android:textSize="15dp" />
+                    android:text="Adicionar a viagem?"
+                    android:textSize="15sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    
+
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:backgroundTint="@color/Background"
                         android:textColor="@color/CorPrimaria"
                         android:text="Sim"></Button>
-                    
+
                 </LinearLayout>
             </LinearLayout>
 
-
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -162,62 +164,76 @@
             android:orientation="horizontal"
             >
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tarifa aérea" />
+                    android:textSize="20sp"
+                    android:text="@string/TextTarifaAerea" />
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Custo Estimado por pessoa"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:text="@string/CustoEstimadoPessoa" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:text="@string/TextAluguelVeiculo"
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Aluguel de Veículos"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:text="@string/TextTotal"
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Valor"></TextView>
+                    android:textSize="20dp"
+                    android:text="@string/TextValor"></TextView>
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"></EditText>
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"></EditText>
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"></EditText>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="15sp"
                     android:text="Adicionar a Viagem?" />
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/Background"
+                    android:textColor="@color/CorPrimaria"
                     android:text="Sim"></Button>
             </LinearLayout>
         </LinearLayout>
@@ -228,65 +244,85 @@
             android:orientation="horizontal"
             >
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Refeições" />
+                    android:textSize="20sp"
+                    android:text="@string/TextRefeicao" />
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Custo Estimado por refeição"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:text="@string/TextCustoEstimadorefeicao" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:text="@string/TextRefeicaoPorDia"
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Refeições por dia"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:text="@string/TextTotal"
                     />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Valor"></TextView>
+                    android:text="@string/TextValor"
+                    android:textSize="20dp"></TextView>
+
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"></EditText>
+
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"></EditText>
+
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"></EditText>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="15sp"
                     android:text="Adicionar a Viagem?" />
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/Background"
+                    android:textColor="@color/CorPrimaria"
                     android:text="Sim"></Button>
             </LinearLayout>
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -294,74 +330,94 @@
             android:orientation="horizontal"
             >
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hospedagem" />
+                    android:textSize="20sp"
+                    android:text="@string/TextHospedagem" />
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Custo médio(por noite)"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:text="@string/TextCustoMedioPorNoite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:text="@string/TextTotalNoites"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:text="@string/TextTotalQuartos"
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total de noites"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total de quartos"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total"
+                    android:layout_height="47dp"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:text="@string/TextTotal"
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Valor"></TextView>
+                    android:textSize="20dp"
+                    android:text="@string/TextValor"></TextView>
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"></EditText>
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"></EditText>
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"></EditText>
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"></EditText>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="15sp"
                     android:text="Adicionar a Viagem?" />
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/Background"
+                    android:textColor="@color/CorPrimaria"
                     android:text="Sim"></Button>
             </LinearLayout>
         </LinearLayout>
+
 
     </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

@@ -28,7 +28,8 @@
 
     <string name="TextTotal">Total</string>
     <string name="TextValor">Valor</string>
-    <String name="TextAdicionarViagem">Adicionar a Viagem?</String>
+    <String name="TextAdicionarViagem">Adicionar a viagem?</String>
+    <String name="TextSim">Sim</String>
 
     <string name="TextGasolina">Gasolina</string>
     <string name="TextTotalEstimadoGas">Total estimado de quilometros</string>
