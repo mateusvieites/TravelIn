@@ -20,8 +20,10 @@
     <string name="hintSenha">Insira sua senha</string>
     <string name="hintCadastrarLogin">Digite seu futuro login :)</string>
     <string name="hintCadastrarSenha">Digite sua senha super secreta</string>
+    <string name="hintTotalDeViajantes">Digite o número de viajantes</string>
 
     <string name="textDescricao">Informe uma breve descrição para seu orçamento</string>
     <string name="hintDescricao">Digite aqui</string>
+    <string name="hintDuracaoViagem">Duração da Viagem</string>
 
 </resources>
