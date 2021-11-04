@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="AzulPadrao">#008f8f</color>
-    <color name="BrancoPadrao">#E8F1F2</color>
+    <color name="CorPrimaria">#008f8f</color>
+    <color name="Background">#E8F1F2</color>
     <color name="botaoPadrao">#5e5c5a</color>
 </resources>
