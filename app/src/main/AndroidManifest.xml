@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelIn">
         <activity
-            android:name=".Dados"
+            android:name=".DadosActivity"
             android:exported="true" />
         <activity
             android:name=".PlanejarActivity"

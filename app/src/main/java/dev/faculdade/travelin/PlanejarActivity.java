@@ -37,8 +37,8 @@ public class PlanejarActivity extends AppCompatActivity {
 
                 if (dao.Insert(model) != -1) {
                     //todo aqui tem que criar a classe DadosActivity (ou colocar outro nome)
-//                    startActivity(new Intent(PlanejarActivity.this, DadosActivity.class));
-//                    finish();
+                    startActivity(new Intent(PlanejarActivity.this, DadosActivity.class));
+                    finish();
                 }
 
                 List<OrcamentoModel> teste = dao.Select();

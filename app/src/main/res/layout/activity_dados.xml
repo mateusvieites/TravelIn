@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,26 +84,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Valor"></TextView>
-                <TextView
+
+                <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="11"></TextView>
-                <TextView
+                    android:layout_height="wrap_content"></EditText>
+
+                <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="5,67"></TextView>
-                <TextView
+                    android:layout_height="wrap_content"></EditText>
+
+                <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1"></TextView>
-                <TextView
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1"></TextView>
-                <TextView
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Valor"></TextView>
+                    android:layout_height="wrap_content"></EditText>
             </LinearLayout>
 
             <LinearLayout
@@ -121,6 +120,215 @@
                     android:text="Sim"></Button>
             </LinearLayout>
 
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarifa aérea" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Custo Estimado por pessoa"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aluguel de Veículos"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor"></TextView>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adicionar a Viagem?" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"></Button>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refeições" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Custo Estimado por refeição"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refeições por dia"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor"></TextView>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adicionar a Viagem?" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"></Button>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hospedagem" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Custo médio(por noite)"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total de noites"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total de quartos"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor"></TextView>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adicionar a Viagem?" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"></Button>
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
