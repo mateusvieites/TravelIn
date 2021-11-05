@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelIn">
         <activity
+            android:name=".teste"
+            android:exported="true" />
+        <activity
             android:name=".DadosActivity"
             android:exported="true" />
         <activity
