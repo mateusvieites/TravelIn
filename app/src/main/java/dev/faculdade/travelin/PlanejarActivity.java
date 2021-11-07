@@ -19,6 +19,7 @@ public class PlanejarActivity extends AppCompatActivity {
     private EditText descricao;
     private OrcamentoDAO dao;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
