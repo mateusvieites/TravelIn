@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/Background"
-    >
+    tools:context=".teste">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +19,6 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/ETTotalViajantes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/hintTotalDeViajantes"
@@ -29,7 +27,6 @@
                 android:autofillHints=""/>
 
             <EditText
-                android:id="@+id/ETTDuracaoViagem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/hintDuracaoViagem"
@@ -95,45 +92,40 @@
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
                     android:text="@string/TextValor"/>
 
                 <EditText
-                    android:id="@+id/ETTTotalDeKm"
                     android:layout_width="50dp"
                     android:layout_height="47dp"
-                    android:layout_marginStart="10dp"/>
+                    android:layout_marginLeft="10dp"/>
 
                 <EditText
-                    android:id="@+id/ETTMediaKMPorLitro"
                     android:layout_width="50dp"
                     android:layout_height="47dp"
-                    android:layout_marginStart="10dp"/>
+                    android:layout_marginLeft="10dp"/>
 
                 <EditText
-                    android:id="@+id/ETTCustoMedioLitro"
                     android:layout_width="50dp"
                     android:layout_height="47dp"
-                    android:layout_marginStart="10dp"/>
+                    android:layout_marginLeft="10dp"/>
 
                 <EditText
-                    android:id="@+id/ETTTotalDeVeiculos"
                     android:layout_width="50dp"
                     android:layout_height="47dp"
-                    android:layout_marginStart="10dp"/>
+                    android:layout_marginLeft="10dp"/>
 
                 <EditText
-                    android:id="@+id/TETotalGasolina"
                     android:layout_width="50dp"
                     android:layout_height="47dp"
-                    android:layout_marginStart="10dp"/>
+                    android:layout_marginLeft="10dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -148,7 +140,6 @@
                     android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/btAdicionarGasolina"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:backgroundTint="@color/Background"
@@ -209,15 +200,12 @@
                     android:textSize="20sp"
                     android:text="@string/TextValor"/>
                 <EditText
-                    android:id="@+id/ETAereaCustoEstimadoPessoa"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
                 <EditText
-                    android:id="@+id/ETAluguelVeiculo"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
                 <EditText
-                    android:id="@+id/TETotalAerea"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
             </LinearLayout>
@@ -235,7 +223,6 @@
                     android:text="@string/TextAdicionarViagem" />
 
                 <Button
-                    android:id="@+id/btAdicionarAerea"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/Background"
@@ -293,20 +280,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/TextValor"
-                    android:textSize="20sp"/>
+                    android:textSize="20dp"/>
 
                 <EditText
-                    android:id="@+id/ETRefeicaoCustoEstimado"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
 
                 <EditText
-                    android:id="@+id/ETRefeicoesPorDia"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
 
                 <EditText
-                    android:id="@+id/TETotalRefeicao"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
             </LinearLayout>
@@ -324,7 +308,6 @@
                     android:text="@string/TextAdicionarViagem" />
 
                 <Button
-                    android:id="@+id/btAdicionarRefeicao"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/Background"
@@ -391,19 +374,15 @@
                     android:textSize="20dp"
                     android:text="@string/TextValor"/>
                 <EditText
-                    android:id="@+id/ETHospedagemCustoMedio"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
                 <EditText
-                    android:id="@+id/ETTotalNoites"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
                 <EditText
-                    android:id="@+id/ETTotalQuartos"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
                 <EditText
-                    android:id="@+id/TETotalHospedagem"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
             </LinearLayout>
@@ -415,7 +394,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/BTAdicionarHospedagem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -431,5 +409,6 @@
         </LinearLayout>
 
     </LinearLayout>
+
 
 </ScrollView>
