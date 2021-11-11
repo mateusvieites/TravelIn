@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -25,8 +27,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hintTotalDeViajantes"
                 android:inputType="number"
-                android:minHeight="48dp"
-                android:autofillHints=""/>
+                android:minHeight="48dp"/>
 
             <EditText
                 android:id="@+id/ETTDuracaoViagem"
@@ -39,6 +40,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal"
             >
 
@@ -123,7 +125,7 @@
                     android:layout_height="47dp"
                     android:layout_marginStart="10dp"/>
 
-                <EditText
+                <TextView
                     android:id="@+id/TETotalGasolina"
                     android:layout_width="50dp"
                     android:layout_height="47dp"
@@ -163,6 +165,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal"
             >
             <LinearLayout
@@ -216,7 +219,7 @@
                     android:id="@+id/ETAluguelVeiculo"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
-                <EditText
+                <TextView
                     android:id="@+id/TETotalAerea"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
@@ -247,6 +250,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal"
             >
             <LinearLayout
@@ -305,7 +309,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
 
-                <EditText
+                <TextView
                     android:id="@+id/TETotalRefeicao"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
@@ -337,6 +341,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal"
             >
             <LinearLayout
@@ -388,7 +393,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:text="@string/TextValor"/>
                 <EditText
                     android:id="@+id/ETHospedagemCustoMedio"
@@ -402,7 +407,7 @@
                     android:id="@+id/ETTotalQuartos"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
-                <EditText
+                <TextView
                     android:id="@+id/TETotalHospedagem"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"/>
@@ -428,8 +433,37 @@
                     android:textColor="@color/CorPrimaria"
                     android:text="@string/TextSim"/>
             </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/BTSalvarOrca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Background"
+                android:textColor="@color/CorPrimaria"
+                android:layout_marginEnd="5dp"
+                android:text="@string/buttonCancelar"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/BTCancelarOrca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Background"
+                android:textColor="@color/CorPrimaria"
+                android:layout_marginStart="5dp"
+                android:text="@string/buttonSalvar"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>
