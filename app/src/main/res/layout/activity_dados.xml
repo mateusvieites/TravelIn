@@ -420,13 +420,14 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/BTAdicionarHospedagem"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:text="@string/TextAdicionarViagem" />
 
                 <Button
+                    android:id="@+id/BTAdicionarHospedagem"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/Background"
@@ -445,7 +446,8 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/BTSalvarOrca"
+
+                android:id="@+id/BTCancelarOrca"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/Background"
@@ -455,7 +457,7 @@
                 android:layout_weight="1"/>
 
             <Button
-                android:id="@+id/BTCancelarOrca"
+                android:id="@+id/BTSalvarOrca"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/Background"
