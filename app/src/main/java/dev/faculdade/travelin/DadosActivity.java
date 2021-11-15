@@ -2,11 +2,13 @@ package dev.faculdade.travelin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import dev.faculdade.travelin.DataBase.model.OrcamentoModel;
 
@@ -54,6 +56,13 @@ public class DadosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dados);
 
+
+        Intent recuperar = getIntent();
+        //String id = recuperar.getStringExtra("Adicionar");
+        //Toast.makeText(DadosActivity.this, id, Toast.LENGTH_SHORT).show();
+        String funcao = recuperar.getStringExtra("funcao");
+        String descricaoOrcamento = recuperar.getStringExtra("Descricao");
+
         totalGasolina   = findViewById(R.id.TETotalGasolina);
         totalAerea      = findViewById(R.id.TETotalAerea);
         totalRefeicoes  = findViewById(R.id.TETotalRefeicao);
@@ -81,8 +90,14 @@ public class DadosActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //adicionar aqui e fechar
+                //descricaoOrcamento = descricao do orcamento
+                if (funcao == "Adicao"){
 
+                }
+                //editar aqui e fechar
+                else{
 
+                }
             }
         });
 

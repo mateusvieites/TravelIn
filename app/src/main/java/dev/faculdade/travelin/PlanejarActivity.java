@@ -35,11 +35,11 @@ public class PlanejarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 OrcamentoModel model = new OrcamentoModel();
                 model.setDescricao(descricao.getText().toString());
-
-                if (dao.Insert(model) != -1) {
+                    Intent intent = new Intent(PlanejarActivity.this, DadosActivity.class);
+                    intent.putExtra("Funcao","Adicao");
+                    intent.putExtra("Descricao",descricao.getText().toString());
                     //todo aqui tem que criar a classe DadosActivity (ou colocar outro nome)
-                    startActivity(new Intent(PlanejarActivity.this, DadosActivity.class));
-                }
+                    startActivity(intent);
                 finish();
 
 //                List<OrcamentoModel> teste = dao.Select();
