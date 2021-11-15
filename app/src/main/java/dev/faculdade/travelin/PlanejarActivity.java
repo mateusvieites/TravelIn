@@ -39,14 +39,14 @@ public class PlanejarActivity extends AppCompatActivity {
                 if (dao.Insert(model) != -1) {
                     //todo aqui tem que criar a classe DadosActivity (ou colocar outro nome)
                     startActivity(new Intent(PlanejarActivity.this, DadosActivity.class));
-                    finish();
                 }
+                finish();
 
-                List<OrcamentoModel> teste = dao.Select();
-
-                for (OrcamentoModel x : teste) {
-                    Toast.makeText(PlanejarActivity.this, x.getDescricao(), Toast.LENGTH_SHORT).show();
-                }
+//                List<OrcamentoModel> teste = dao.Select();
+//
+//                for (OrcamentoModel x : teste) {
+//                    Toast.makeText(PlanejarActivity.this, x.getDescricao(), Toast.LENGTH_SHORT).show();
+//                }
             }
         });
     }

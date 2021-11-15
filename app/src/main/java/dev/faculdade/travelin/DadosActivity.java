@@ -59,22 +59,21 @@ public class DadosActivity extends AppCompatActivity {
         totalRefeicoes  = findViewById(R.id.TETotalRefeicao);
         totalHospedagem = findViewById(R.id.TETotalHospedagem);
 
-        btAdicionarGasolina     = findViewById(R.id.btAdicionarGasolina) ;
-        btAdicionarAerea        = findViewById(R.id.btAdicionarAerea);
-        btAdicionarRefeicao     = findViewById(R.id.btAdicionarRefeicao);
-        btAdicionarHospedagem   = findViewById(R.id.BTAdicionarHospedagem);
+        btAdicionarGasolina   = findViewById(R.id.btAdicionarGasolina) ;
+        btAdicionarAerea      = findViewById(R.id.btAdicionarAerea);
+        btAdicionarRefeicao   = findViewById(R.id.btAdicionarRefeicao);
+        btAdicionarHospedagem = findViewById(R.id.BTAdicionarHospedagem);
 
-        etTTotalDeKm                = findViewById(R.id.ETTTotalDeKm);
-        etTMediaKMPorLitro          = findViewById(R.id.ETTMediaKMPorLitro);
-        etTCustoMedioLitro          = findViewById(R.id.ETTCustoMedioLitro);
-        etAereaCustoEstimadoPessoa  = findViewById(R.id.ETAereaCustoEstimadoPessoa);
-        etAluguelVeiculo            = findViewById(R.id.ETAluguelVeiculo);
-        etRefeicaoCustoEstimado     = findViewById(R.id.ETRefeicaoCustoEstimado);
-        etRefeicoesPorDia           = findViewById(R.id.ETRefeicoesPorDia);
-        etHospedagemCustoMedio      = findViewById(R.id.ETHospedagemCustoMedio);
-        etTotalNoites               = findViewById(R.id.ETTotalNoites);
-        etTotalQuartos              = findViewById(R.id.ETTotalQuartos);
-
+        etTTotalDeKm               = findViewById(R.id.ETTTotalDeKm);
+        etTMediaKMPorLitro         = findViewById(R.id.ETTMediaKMPorLitro);
+        etTCustoMedioLitro         = findViewById(R.id.ETTCustoMedioLitro);
+        etAereaCustoEstimadoPessoa = findViewById(R.id.ETAereaCustoEstimadoPessoa);
+        etAluguelVeiculo           = findViewById(R.id.ETAluguelVeiculo);
+        etRefeicaoCustoEstimado    = findViewById(R.id.ETRefeicaoCustoEstimado);
+        etRefeicoesPorDia          = findViewById(R.id.ETRefeicoesPorDia);
+        etHospedagemCustoMedio     = findViewById(R.id.ETHospedagemCustoMedio);
+        etTotalNoites              = findViewById(R.id.ETTotalNoites);
+        etTotalQuartos             = findViewById(R.id.ETTotalQuartos);
 
 
         btSalvar = findViewById(R.id.BTSalvarOrca);
