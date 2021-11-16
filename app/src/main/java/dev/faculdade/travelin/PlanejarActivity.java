@@ -17,15 +17,11 @@ import dev.faculdade.travelin.DataBase.model.OrcamentoModel;
 public class PlanejarActivity extends AppCompatActivity {
     private Button btSalvar;
     private EditText descricao;
-    private OrcamentoDAO dao;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planejar);
-
-        dao = new OrcamentoDAO(PlanejarActivity.this);
 
         btSalvar = findViewById(R.id.btSalvarDesc);
         descricao = findViewById(R.id.ETDescricao);
@@ -33,13 +29,10 @@ public class PlanejarActivity extends AppCompatActivity {
         btSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                OrcamentoModel model = new OrcamentoModel();
-                model.setDescricao(descricao.getText().toString());
-                    Intent intent = new Intent(PlanejarActivity.this, DadosActivity.class);
-                    intent.putExtra("Funcao","Adicao");
-                    intent.putExtra("Descricao",descricao.getText().toString());
-                    //todo aqui tem que criar a classe DadosActivity (ou colocar outro nome)
-                    startActivity(intent);
+                Intent intent = new Intent(PlanejarActivity.this, DadosActivity.class);
+                intent.putExtra("Funcao","Adicao");
+                intent.putExtra("Descricao",descricao.getText().toString());
+                startActivity(intent);
                 finish();
 
 //                List<OrcamentoModel> teste = dao.Select();
