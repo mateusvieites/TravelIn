@@ -80,8 +80,10 @@ public class OrcamentoDAO extends AbstractDAO {
         Close();
     }
 
+
+
     public int Update(
-            final Integer id,
+            final Long id,
             final String descricao,
             final int totalViajantes,
             final int duracaoViagem,

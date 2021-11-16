@@ -109,10 +109,34 @@ public class DadosActivity extends AppCompatActivity {
                 if (funcao == "Adicao"){
                     // inserção cria um novo orçamento
                     model = new OrcamentoModel();
+
+                    // pega todos os campos da activity e adiciona no model
+                    model.setDescricao(descricaoOrcamento);
+                    model.setTotalViajantes(Integer.parseInt(etTotalViajantes.getText().toString()));
+                    model.setDuracaoViagem(Integer.parseInt(etTDuracaoViagem.getText().toString()));
+                    model.setTotalViagem(totalViagem);
+                    model.setGasolinaTotalKM(Double.parseDouble(etTTotalDeKm.getText().toString()));
+                    model.setGasolinaMediaPLitro(Double.parseDouble(etTMediaKMPorLitro.getText().toString()));
+                    model.setGasolinaCustoMedio(Double.parseDouble(etTCustoMedioLitro.getText().toString()));
+                    model.setGasolinaTotalVeiculos(Integer.parseInt(etTotalVeiculo.getText().toString()));
+                    model.setGasolinaAdicionar(VerificarBotaoAdicionar(btAdicionarGasolina));
+                    model.setTarifaCustoPPessoa(Double.parseDouble(etAereaCustoEstimadoPessoa.getText().toString()));
+                    model.setTarifaAluguelVeiculo(Double.parseDouble(etAluguelVeiculo.getText().toString()));
+                    model.setTarifaAdicionar(VerificarBotaoAdicionar(btAdicionarAerea));
+                    model.setRefeicaoCusto(Double.parseDouble(etRefeicaoCustoEstimado.getText().toString()));
+                    model.setRefeicaoPDia(Integer.parseInt(etRefeicoesPorDia.getText().toString()));
+                    model.setRefeicaoAdicionar(VerificarBotaoAdicionar(btAdicionarRefeicao));
+                    model.setHospedagemCustoMedio(Double.parseDouble(etHospedagemCustoMedio.getText().toString()));
+                    model.setHospedagemNoites(Integer.parseInt(etTotalNoites.getText().toString()));
+                    model.setHospedagemQuartos(Integer.parseInt(etTotalQuartos.getText().toString()));
+                    model.setHospedagemAdicionar(VerificarBotaoAdicionar(btAdicionarHospedagem));
+
+                    dao.Insert(model);
                 }
                 else{
                     // edição busca um orçamento com a descrição passada por parâmetro
                     model = dao.Select(descricaoOrcamento);
+
                     /*
                      * ToDo
                      *  Obs.: Seria legal se quando o usuário entrasse na activity para editar os dados,
@@ -121,28 +145,30 @@ public class DadosActivity extends AppCompatActivity {
                      *
                      *  O objeto model já é o objeto do banco, então só precisa usar model.getTotalViagem() pra pegar o valor
                      */
-                }
 
-                // pega todos os campos da activity e adiciona no model
-                model.setDescricao(descricaoOrcamento);
-                model.setTotalViajantes(Integer.parseInt(etTotalViajantes.getText().toString()));
-                model.setDuracaoViagem(Integer.parseInt(etTDuracaoViagem.getText().toString()));
-                model.setTotalViagem(totalViagem);
-                model.setGasolinaTotalKM(Double.parseDouble(etTTotalDeKm.getText().toString()));
-                model.setGasolinaMediaPLitro(Double.parseDouble(etTMediaKMPorLitro.getText().toString()));
-                model.setGasolinaCustoMedio(Double.parseDouble(etTCustoMedioLitro.getText().toString()));
-                model.setGasolinaTotalVeiculos(Integer.parseInt(etTotalVeiculo.getText().toString()));
-                model.setGasolinaAdicionar(VerificarBotaoAdicionar(btAdicionarGasolina));
-                model.setTarifaCustoPPessoa(Double.parseDouble(etAereaCustoEstimadoPessoa.getText().toString()));
-                model.setTarifaAluguelVeiculo(Double.parseDouble(etAluguelVeiculo.getText().toString()));
-                model.setTarifaAdicionar(VerificarBotaoAdicionar(btAdicionarAerea));
-                model.setRefeicaoCusto(Double.parseDouble(etRefeicaoCustoEstimado.getText().toString()));
-                model.setRefeicaoPDia(Integer.parseInt(etRefeicoesPorDia.getText().toString()));
-                model.setRefeicaoAdicionar(VerificarBotaoAdicionar(btAdicionarRefeicao));
-                model.setHospedagemCustoMedio(Double.parseDouble(etHospedagemCustoMedio.getText().toString()));
-                model.setHospedagemNoites(Integer.parseInt(etTotalNoites.getText().toString()));
-                model.setHospedagemQuartos(Integer.parseInt(etTotalQuartos.getText().toString()));
-                model.setHospedagemAdicionar(VerificarBotaoAdicionar(btAdicionarHospedagem));
+                    dao.Update(
+                            model.getId(),
+                            descricaoOrcamento,
+                            Integer.parseInt(etTotalViajantes.getText().toString()),
+                            Integer.parseInt(etTDuracaoViagem.getText().toString()),
+                            totalViagem,
+                            Double.parseDouble(etTTotalDeKm.getText().toString()),
+                            Double.parseDouble(etTMediaKMPorLitro.getText().toString()),
+                            Double.parseDouble(etTCustoMedioLitro.getText().toString()),
+                            Integer.parseInt(etTotalVeiculo.getText().toString()),
+                            VerificarBotaoAdicionar(btAdicionarGasolina),
+                            Double.parseDouble(etAereaCustoEstimadoPessoa.getText().toString()),
+                            Double.parseDouble(etAluguelVeiculo.getText().toString()),
+                            VerificarBotaoAdicionar(btAdicionarAerea),
+                            Double.parseDouble(etRefeicaoCustoEstimado.getText().toString()),
+                            Integer.parseInt(etRefeicoesPorDia.getText().toString()),
+                            VerificarBotaoAdicionar(btAdicionarRefeicao),
+                            Double.parseDouble(etHospedagemCustoMedio.getText().toString()),
+                            Integer.parseInt(etTotalNoites.getText().toString()),
+                            Integer.parseInt(etTotalQuartos.getText().toString()),
+                            VerificarBotaoAdicionar(btAdicionarHospedagem)
+                    );
+                }
 
                 finish();
             }
