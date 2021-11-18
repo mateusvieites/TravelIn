@@ -31,22 +31,24 @@ public class DadosActivity extends AppCompatActivity {
         return findViewById(resID);
     }
 
-    private String CalculartotalGasolina(float totalkm,float mediakm,float custolitro,float totalveiculos){
-        float total = ((totalkm/mediakm)*custolitro)/totalveiculos;
-        return Float.toString(total);
+    private String CalculartotalGasolina(double totalkm,double mediakm,double custolitro,double totalveiculos){
+        double total = ((totalkm/mediakm)*custolitro)/totalveiculos;
+        return Double.toString(total);
     }
 
-    private String CalcularTotalAerea(float custoPessoa,float totalViajantes, float aluguelVeiculo){
-        float total = (custoPessoa*totalViajantes) * aluguelVeiculo;
-        return Float.toString(total);
+    private String CalcularTotalAerea(double custoPessoa,double totalViajantes, double aluguelVeiculo){
+        double total = (custoPessoa*totalViajantes) * aluguelVeiculo;
+        return Double.toString(total);
     }
-    private String CalcularTotalRefeicao(float refeicoes,float totalViajantes,float custoEstimado,float duracaoViagem){
-        float total = ((refeicoes * totalViajantes)*custoEstimado)*duracaoViagem;
-        return Float.toString(total);
+
+    private String CalcularTotalRefeicao(double refeicoes,double totalViajantes,double custoEstimado,double duracaoViagem){
+        double total = ((refeicoes * totalViajantes)*custoEstimado)*duracaoViagem;
+        return Double.toString(total);
     }
-    private String CalcularTotalHospedagem(float custoMedio,float totalNoites,float totalQuartos){
-        float total = (custoMedio*totalNoites)*totalNoites;
-        return Float.toString(total);
+
+    private String CalcularTotalHospedagem(double custoMedio,double totalNoites,double totalQuartos){
+        double total = (custoMedio*totalNoites)*totalNoites;
+        return Double.toString(total);
     }
 
     private String AlterarBotaoAdicionar(Button botaoAdicionar){
@@ -70,9 +72,7 @@ public class DadosActivity extends AppCompatActivity {
         String funcao = recuperar.getStringExtra("Funcao");
         String descricaoOrcamento = recuperar.getStringExtra("Descricao");
 
-        if (funcao.equals("Edicao")) {
-            //#ToDo precisa puxar todos os dados e colocar nos campos necessários visuais aqui
-        }
+
 
         totalGasolina   = findViewById(R.id.TETotalGasolina);
         totalAerea      = findViewById(R.id.TETotalAerea);
@@ -98,46 +98,75 @@ public class DadosActivity extends AppCompatActivity {
         etTotalNoites              = findViewById(R.id.ETTotalNoites);
         etTotalQuartos             = findViewById(R.id.ETTotalQuartos);
 
+        if (funcao.equals("Edicao")) {
+            /*
+            * TODO TEM QUE PUXAR DADOS AQUI E SETAR O TEXTO APENAS ISSO
+            *
+            *  */
+
+
+
+            totalAerea.setText(CalcularTotalAerea(Double.parseDouble(etAereaCustoEstimadoPessoa.getText().toString()),
+                    Double.parseDouble(etTotalViajantes.getText().toString()),
+                    Double.parseDouble(etAluguelVeiculo.getText().toString())
+
+            ));
+            totalGasolina.setText(CalculartotalGasolina(Double.parseDouble(etTTotalDeKm.getText().toString()),
+                    Double.parseDouble(etTMediaKMPorLitro.getText().toString()),
+                    Double.parseDouble(etTCustoMedioLitro.getText().toString()),
+                    Double.parseDouble(etTCustoMedioLitro.getText().toString())));
+
+            totalHospedagem.setText(CalcularTotalHospedagem(
+                    Double.parseDouble(etHospedagemCustoMedio.getText().toString()),
+                    Double.parseDouble(etTotalNoites.getText().toString()),
+                    Double.parseDouble(etTotalQuartos.getText().toString())
+
+
+            ));
+            totalRefeicoes.setText(CalcularTotalRefeicao(
+                    Double.parseDouble(etRefeicoesPorDia.getText().toString()),
+                    Double.parseDouble(etTotalViajantes.getText().toString()),
+                    Double.parseDouble(etRefeicaoCustoEstimado.getText().toString()),
+                    Double.parseDouble(etTDuracaoViagem.getText().toString())
+
+            ));
+            double totalViagem;
+            totalViagem = Double.parseDouble(totalAerea.getText().toString())   +
+                    Double.parseDouble(totalGasolina.getText().toString())      +
+                    Double.parseDouble(totalHospedagem.getText().toString())    +
+                    Double.parseDouble(totalRefeicoes.getText().toString());
+
+        }
+
         btSalvar = findViewById(R.id.BTSalvarOrca);
         btSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // cria um novo objeto do tipo OrcamentoModel
                 OrcamentoModel model;
+                double totalViagem;
+                totalViagem = Double.parseDouble(CalcularTotalAerea(Double.parseDouble(etAereaCustoEstimadoPessoa.getText().toString()),
+                        Double.parseDouble(etTotalViajantes.getText().toString()),
+                        Double.parseDouble(etAluguelVeiculo.getText().toString())
 
-                // ToDo esses aqui são os totais temporarios, tem que fazer o cálculo correto e adicionar na activity
-                double gasolinaTotal = Double.parseDouble(etTTotalDeKm.getText().toString()) +
-                        Double.parseDouble(etTMediaKMPorLitro.getText().toString()) +
-                        Double.parseDouble(etTCustoMedioLitro.getText().toString()) +
-                        Double.parseDouble(etTotalVeiculo.getText().toString());
+                ));
+                totalViagem += Double.parseDouble(CalculartotalGasolina(Double.parseDouble(etTTotalDeKm.getText().toString()),
+                        Double.parseDouble(etTMediaKMPorLitro.getText().toString()),
+                        Double.parseDouble(etTCustoMedioLitro.getText().toString()),
+                        Double.parseDouble(etTCustoMedioLitro.getText().toString())));
+                totalViagem += Double.parseDouble(CalcularTotalHospedagem(
+                        Double.parseDouble(etHospedagemCustoMedio.getText().toString()),
+                        Double.parseDouble(etTotalNoites.getText().toString()),
+                        Double.parseDouble(etTotalQuartos.getText().toString())
+                ));
+                totalViagem += Double.parseDouble(CalcularTotalRefeicao(
+                        Double.parseDouble(etRefeicoesPorDia.getText().toString()),
+                        Double.parseDouble(etTotalViajantes.getText().toString()),
+                        Double.parseDouble(etRefeicaoCustoEstimado.getText().toString()),
+                        Double.parseDouble(etTDuracaoViagem.getText().toString())
+                ));
 
-                double tarifaTotal = Double.parseDouble(etAereaCustoEstimadoPessoa.getText().toString()) +
-                        Double.parseDouble(etAluguelVeiculo.getText().toString());
 
-                double refeicaoTotal = Double.parseDouble(etRefeicaoCustoEstimado.getText().toString()) +
-                        Double.parseDouble(etRefeicoesPorDia.getText().toString());
-
-                double hospedagemTotal = Double.parseDouble(etHospedagemCustoMedio.getText().toString()) +
-                        Double.parseDouble(etTotalNoites.getText().toString()) +
-                        Double.parseDouble(etTotalQuartos.getText().toString());
-
-                double totalViagem = 0;
-
-//                if (VerificarBotaoAdicionar(btAdicionarGasolina)) {
-                    totalViagem += gasolinaTotal;
-//                }
-
-//                if (VerificarBotaoAdicionar(btAdicionarAerea)) {
-                    totalViagem += tarifaTotal;
-//                }
-
-//                if (VerificarBotaoAdicionar(btAdicionarRefeicao)) {
-                    totalViagem += refeicaoTotal;
-//                }
-
-//                if (VerificarBotaoAdicionar(btAdicionarHospedagem)) {
-                    totalViagem += hospedagemTotal;
-//                }
 
                 // verifica se é uma inserção ou edição
                 if (funcao.equals("Adicao")){

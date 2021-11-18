@@ -129,7 +129,7 @@
                     android:id="@+id/TETotalGasolina"
                     android:layout_width="50dp"
                     android:layout_height="47dp"
-                    android:layout_marginStart="10dp"/>
+                    android:layout_marginStart="10dp" />
             </LinearLayout>
 
             <LinearLayout
