@@ -64,11 +64,17 @@ public class DadosActivity extends AppCompatActivity {
 
         dao = new OrcamentoDAO(DadosActivity.this);
 
+
+
         Intent recuperar = getIntent();
         //String id = recuperar.getStringExtra("Adicionar");
         //Toast.makeText(DadosActivity.this, id, Toast.LENGTH_SHORT).show();
         String funcao = recuperar.getStringExtra("funcao");
         String descricaoOrcamento = recuperar.getStringExtra("Descricao");
+
+        if (funcao == "Edicao") {
+            //#ToDo precisa puxar todos os dados e colocar nos campos necessários visuais aqui
+        }
 
         totalGasolina   = findViewById(R.id.TETotalGasolina);
         totalAerea      = findViewById(R.id.TETotalAerea);

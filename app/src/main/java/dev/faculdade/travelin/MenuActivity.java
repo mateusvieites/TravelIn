@@ -32,6 +32,7 @@ public class MenuActivity extends AppCompatActivity {
         btMinhasViagens.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent( MenuActivity.this, ListaOrcamentos.class));
                 //Abrir menu de pesquisa de viagens
                 //startActivity(new Intent( MainActivity.this, MenuActivity.class));
             }
