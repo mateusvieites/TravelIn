@@ -50,11 +50,11 @@ public class DadosActivity extends AppCompatActivity {
     }
 
     private String AlterarBotaoAdicionar(Button botaoAdicionar){
-        return (botaoAdicionar.getText().toString().trim() == "Sim") ? "Não":"Sim";
+        return (botaoAdicionar.getText().toString().trim().equals("Sim")) ? "Não" : "Sim";
     }
 
     private boolean VerificarBotaoAdicionar(Button adicionarBotao){
-        return adicionarBotao.getText().toString() == "Sim";
+        return adicionarBotao.getText().toString().equals("Sim");
     }
 
     @Override
@@ -64,15 +64,13 @@ public class DadosActivity extends AppCompatActivity {
 
         dao = new OrcamentoDAO(DadosActivity.this);
 
-
-
         Intent recuperar = getIntent();
         //String id = recuperar.getStringExtra("Adicionar");
         //Toast.makeText(DadosActivity.this, id, Toast.LENGTH_SHORT).show();
-        String funcao = recuperar.getStringExtra("funcao");
+        String funcao = recuperar.getStringExtra("Funcao");
         String descricaoOrcamento = recuperar.getStringExtra("Descricao");
 
-        if (funcao == "Edicao") {
+        if (funcao.equals("Edicao")) {
             //#ToDo precisa puxar todos os dados e colocar nos campos necessários visuais aqui
         }
 
@@ -86,9 +84,12 @@ public class DadosActivity extends AppCompatActivity {
         btAdicionarRefeicao   = findViewById(R.id.btAdicionarRefeicao);
         btAdicionarHospedagem = findViewById(R.id.BTAdicionarHospedagem);
 
+        etTotalViajantes           = findViewById(R.id.ETTotalViajantes);
+        etTDuracaoViagem           = findViewById(R.id.ETTDuracaoViagem);
         etTTotalDeKm               = findViewById(R.id.ETTTotalDeKm);
         etTMediaKMPorLitro         = findViewById(R.id.ETTMediaKMPorLitro);
         etTCustoMedioLitro         = findViewById(R.id.ETTCustoMedioLitro);
+        etTotalVeiculo             = findViewById(R.id.ETTTotalDeVeiculos);
         etAereaCustoEstimadoPessoa = findViewById(R.id.ETAereaCustoEstimadoPessoa);
         etAluguelVeiculo           = findViewById(R.id.ETAluguelVeiculo);
         etRefeicaoCustoEstimado    = findViewById(R.id.ETRefeicaoCustoEstimado);
@@ -96,13 +97,6 @@ public class DadosActivity extends AppCompatActivity {
         etHospedagemCustoMedio     = findViewById(R.id.ETHospedagemCustoMedio);
         etTotalNoites              = findViewById(R.id.ETTotalNoites);
         etTotalQuartos             = findViewById(R.id.ETTotalQuartos);
-        etTotalVeiculo             = findViewById(R.id.ETTTotalDeVeiculos);
-
-        Double totalViagem =
-                Double.parseDouble(totalGasolina.getText().toString()) +
-                Double.parseDouble(totalAerea.getText().toString()) +
-                Double.parseDouble(totalRefeicoes.getText().toString()) +
-                Double.parseDouble(totalHospedagem.getText().toString());
 
         btSalvar = findViewById(R.id.BTSalvarOrca);
         btSalvar.setOnClickListener(new View.OnClickListener() {
@@ -111,8 +105,42 @@ public class DadosActivity extends AppCompatActivity {
                 // cria um novo objeto do tipo OrcamentoModel
                 OrcamentoModel model;
 
+                // ToDo esses aqui são os totais temporarios, tem que fazer o cálculo correto e adicionar na activity
+                double gasolinaTotal = Double.parseDouble(etTTotalDeKm.getText().toString()) +
+                        Double.parseDouble(etTMediaKMPorLitro.getText().toString()) +
+                        Double.parseDouble(etTCustoMedioLitro.getText().toString()) +
+                        Double.parseDouble(etTotalVeiculo.getText().toString());
+
+                double tarifaTotal = Double.parseDouble(etAereaCustoEstimadoPessoa.getText().toString()) +
+                        Double.parseDouble(etAluguelVeiculo.getText().toString());
+
+                double refeicaoTotal = Double.parseDouble(etRefeicaoCustoEstimado.getText().toString()) +
+                        Double.parseDouble(etRefeicoesPorDia.getText().toString());
+
+                double hospedagemTotal = Double.parseDouble(etHospedagemCustoMedio.getText().toString()) +
+                        Double.parseDouble(etTotalNoites.getText().toString()) +
+                        Double.parseDouble(etTotalQuartos.getText().toString());
+
+                double totalViagem = 0;
+
+//                if (VerificarBotaoAdicionar(btAdicionarGasolina)) {
+                    totalViagem += gasolinaTotal;
+//                }
+
+//                if (VerificarBotaoAdicionar(btAdicionarAerea)) {
+                    totalViagem += tarifaTotal;
+//                }
+
+//                if (VerificarBotaoAdicionar(btAdicionarRefeicao)) {
+                    totalViagem += refeicaoTotal;
+//                }
+
+//                if (VerificarBotaoAdicionar(btAdicionarHospedagem)) {
+                    totalViagem += hospedagemTotal;
+//                }
+
                 // verifica se é uma inserção ou edição
-                if (funcao == "Adicao"){
+                if (funcao.equals("Adicao")){
                     // inserção cria um novo orçamento
                     model = new OrcamentoModel();
 
@@ -188,13 +216,11 @@ public class DadosActivity extends AppCompatActivity {
             }
         });
 
-
-
-
         // Muda o status do botão para Sim / Não
         btAdicionarGasolina.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                // ToDo você chamou o método, mas o método só retorna uma String, não altera o texto do botão
                 AlterarBotaoAdicionar(btAdicionarGasolina);
             }
         });
