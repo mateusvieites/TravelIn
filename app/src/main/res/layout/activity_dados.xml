@@ -21,19 +21,26 @@
             android:layout_marginTop="20dp"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/ETTotalViajantes"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/hintTotalDeViajantes"
+                android:text="@string/TextTotalViajantes"/>
+            <EditText
+                android:id="@+id/ETTotalViajantes"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:inputType="number"
                 android:minHeight="48dp"/>
 
-            <EditText
-                android:id="@+id/ETTDuracaoViagem"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/hintDuracaoViagem"
+                android:layout_marginTop="10dp"
+                android:text="@string/hintDuracaoViagem"/>
+            <EditText
+                android:id="@+id/ETTDuracaoViagem"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:inputType="number"
                 android:minHeight="48dp"/>
         </LinearLayout>
@@ -434,6 +441,27 @@
                     android:textColor="@color/CorPrimaria"
                     android:text="@string/TextSim"/>
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TextTotalViagem"
+                android:textSize="20sp"
+                android:textColor="@color/CorPrimaria"/>
+            <TextView
+                android:id="@+id/TETotalViagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"/>
 
         </LinearLayout>
 

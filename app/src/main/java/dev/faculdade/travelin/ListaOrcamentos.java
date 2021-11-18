@@ -41,8 +41,11 @@ public class ListaOrcamentos extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                // ToDo só pra teste, pode tirar e abrir a tela que precisa
-                Toast.makeText(getApplicationContext(), "Selecionou: " + descricoes.get(i).toString(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ListaOrcamentos.this, DadosActivity.class);
+                intent.putExtra("Funcao","Edicao");
+                intent.putExtra("Descricao",descricoes.get(i).toString());
+                startActivity(intent);
+                finish();
             }
         });
     }

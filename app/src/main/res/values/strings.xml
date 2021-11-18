@@ -37,6 +37,9 @@
     <string name="TextMediaQuilometragem">Média de quilometros por litro</string>
     <string name="TextCustoMedioPorLitro">Custo médio por litro</string>
     <string name="TextTotalVeiculos">Total de veículos</string>
+    <string name="TextTotalViajantes">Total de viajantes:</string>
+    <string name="TextDuraçãoViagem">Duração da viagem (dias):</string>
+    <string name="TextTotalViagem">Total da viagem:</string>
 
     <string name="TextTarifaAerea">Tarifa aérea</string>
     <string name="CustoEstimadoPessoa">Custo Estimado por pessoa</string>

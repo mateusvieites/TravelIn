@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 import dev.faculdade.travelin.DataBase.dao.OrcamentoDAO;
 import dev.faculdade.travelin.DataBase.model.OrcamentoModel;
 
@@ -19,7 +21,7 @@ public class DadosActivity extends AppCompatActivity {
 
     private Button btSalvar,btCancelar;
     private EditText etTotalViajantes,etTDuracaoViagem;
-    private TextView totalGasolina,totalAerea,totalRefeicoes,totalHospedagem;
+    private TextView totalGasolina,totalAerea,totalRefeicoes,totalHospedagem,totalViagem;
     private Button btAdicionarGasolina,btAdicionarAerea,btAdicionarRefeicao,btAdicionarHospedagem;
     private EditText etTTotalDeKm,etTMediaKMPorLitro,etTCustoMedioLitro,etAereaCustoEstimadoPessoa,
             etAluguelVeiculo,etRefeicaoCustoEstimado,etRefeicoesPorDia,
@@ -72,8 +74,7 @@ public class DadosActivity extends AppCompatActivity {
         String funcao = recuperar.getStringExtra("Funcao");
         String descricaoOrcamento = recuperar.getStringExtra("Descricao");
 
-
-
+        totalViagem     = findViewById(R.id.TETotalViagem);
         totalGasolina   = findViewById(R.id.TETotalGasolina);
         totalAerea      = findViewById(R.id.TETotalAerea);
         totalRefeicoes  = findViewById(R.id.TETotalRefeicao);
@@ -99,12 +100,29 @@ public class DadosActivity extends AppCompatActivity {
         etTotalQuartos             = findViewById(R.id.ETTotalQuartos);
 
         if (funcao.equals("Edicao")) {
-            /*
-            * TODO TEM QUE PUXAR DADOS AQUI E SETAR O TEXTO APENAS ISSO
-            *
-            *  */
+            OrcamentoModel model = dao.Select(descricaoOrcamento);
 
+            etTotalViajantes.setText(String.valueOf(model.getTotalViajantes()));
+            etTDuracaoViagem.setText(String.valueOf(model.getDuracaoViagem()));
 
+            etTTotalDeKm.setText(String.valueOf(model.getGasolinaTotalKM()));
+            etTMediaKMPorLitro.setText(String.valueOf(model.getGasolinaMediaPLitro()));
+            etTCustoMedioLitro.setText(String.valueOf(model.getGasolinaCustoMedio()));
+            etTotalVeiculo.setText(String.valueOf(model.getGasolinaTotalVeiculos()));
+            btAdicionarGasolina.setText(model.isGasolinaAdicionar() ? "Sim" : "Não");
+
+            etAereaCustoEstimadoPessoa.setText(String.valueOf(model.getTarifaCustoPPessoa()));
+            etAluguelVeiculo.setText(String.valueOf(model.getTarifaAluguelVeiculo()));
+            btAdicionarAerea.setText(model.isTarifaAdicionar() ? "Sim" : "Não");
+
+            etRefeicaoCustoEstimado.setText(String.valueOf(model.getRefeicaoCusto()));
+            etRefeicoesPorDia.setText(String.valueOf(model.getRefeicaoPDia()));
+            btAdicionarRefeicao.setText(model.isRefeicaoAdicionar() ? "Sim" : "Não");
+
+            etHospedagemCustoMedio.setText(String.valueOf(model.getHospedagemCustoMedio()));
+            etTotalNoites.setText(String.valueOf(model.getHospedagemNoites()));
+            etTotalQuartos.setText(String.valueOf(model.getHospedagemQuartos()));
+            btAdicionarHospedagem.setText(model.isHospedagemAdicionar() ? "Sim" : "Não");
 
             totalAerea.setText(CalcularTotalAerea(Double.parseDouble(etAereaCustoEstimadoPessoa.getText().toString()),
                     Double.parseDouble(etTotalViajantes.getText().toString()),
@@ -130,11 +148,25 @@ public class DadosActivity extends AppCompatActivity {
                     Double.parseDouble(etTDuracaoViagem.getText().toString())
 
             ));
-            double totalViagem;
-            totalViagem = Double.parseDouble(totalAerea.getText().toString())   +
-                    Double.parseDouble(totalGasolina.getText().toString())      +
-                    Double.parseDouble(totalHospedagem.getText().toString())    +
-                    Double.parseDouble(totalRefeicoes.getText().toString());
+            double calculoTotal = 0;
+
+            if (VerificarBotaoAdicionar(btAdicionarGasolina)) {
+                calculoTotal += Double.parseDouble(totalGasolina.getText().toString());
+            }
+
+            if (VerificarBotaoAdicionar(btAdicionarAerea)) {
+                calculoTotal += Double.parseDouble(totalAerea.getText().toString());
+            }
+
+            if (VerificarBotaoAdicionar(btAdicionarHospedagem)) {
+                calculoTotal += Double.parseDouble(totalHospedagem.getText().toString());
+            }
+
+            if (VerificarBotaoAdicionar(btAdicionarRefeicao)) {
+                calculoTotal += Double.parseDouble(totalRefeicoes.getText().toString());
+            }
+
+            totalViagem.setText(String.valueOf(calculoTotal));
 
         }
 
@@ -165,8 +197,6 @@ public class DadosActivity extends AppCompatActivity {
                         Double.parseDouble(etRefeicaoCustoEstimado.getText().toString()),
                         Double.parseDouble(etTDuracaoViagem.getText().toString())
                 ));
-
-
 
                 // verifica se é uma inserção ou edição
                 if (funcao.equals("Adicao")){
@@ -249,27 +279,26 @@ public class DadosActivity extends AppCompatActivity {
         btAdicionarGasolina.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                // ToDo você chamou o método, mas o método só retorna uma String, não altera o texto do botão
-                AlterarBotaoAdicionar(btAdicionarGasolina);
+                btAdicionarGasolina.setText(AlterarBotaoAdicionar(btAdicionarGasolina));
             }
         });
 
         btAdicionarAerea.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                AlterarBotaoAdicionar(btAdicionarAerea);
+                btAdicionarAerea.setText(AlterarBotaoAdicionar(btAdicionarAerea));
             }
         });
         btAdicionarRefeicao.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                AlterarBotaoAdicionar(btAdicionarRefeicao);
+                btAdicionarRefeicao.setText(AlterarBotaoAdicionar(btAdicionarRefeicao));
             }
         });
         btAdicionarHospedagem.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                AlterarBotaoAdicionar(btAdicionarHospedagem);
+                btAdicionarHospedagem.setText(AlterarBotaoAdicionar(btAdicionarHospedagem));
             }
         });
 
