@@ -34,12 +34,12 @@ public class DadosActivity extends AppCompatActivity {
     }
 
     private String CalculartotalGasolina(double totalkm,double mediakm,double custolitro,double totalveiculos){
-        double total = ((totalkm/mediakm)*custolitro)/totalveiculos;
+        double total = ((totalkm/mediakm)*custolitro)*totalveiculos;
         return Double.toString(total);
     }
 
     private String CalcularTotalAerea(double custoPessoa,double totalViajantes, double aluguelVeiculo){
-        double total = (custoPessoa*totalViajantes) * aluguelVeiculo;
+        double total = (custoPessoa*totalViajantes) + aluguelVeiculo;
         return Double.toString(total);
     }
 
@@ -49,7 +49,7 @@ public class DadosActivity extends AppCompatActivity {
     }
 
     private String CalcularTotalHospedagem(double custoMedio,double totalNoites,double totalQuartos){
-        double total = (custoMedio*totalNoites)*totalNoites;
+        double total = (custoMedio*totalNoites)*totalQuartos;
         return Double.toString(total);
     }
 
@@ -132,7 +132,7 @@ public class DadosActivity extends AppCompatActivity {
             totalGasolina.setText(CalculartotalGasolina(Double.parseDouble(etTTotalDeKm.getText().toString()),
                     Double.parseDouble(etTMediaKMPorLitro.getText().toString()),
                     Double.parseDouble(etTCustoMedioLitro.getText().toString()),
-                    Double.parseDouble(etTCustoMedioLitro.getText().toString())));
+                    Double.parseDouble(etTotalVeiculo.getText().toString())));
 
             totalHospedagem.setText(CalcularTotalHospedagem(
                     Double.parseDouble(etHospedagemCustoMedio.getText().toString()),
